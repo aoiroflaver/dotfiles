@@ -1,0 +1,10 @@
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+highlight SpecialKey term=underline ctermfg=darkgray guifg=#F5DEB3
+
+" ウインドウの幅
+set columns=180      " 横幅
+" ウインドウの高さ
+set lines=60        " 行数
+" コマンドラインの高さ(GUI使用時)
+set cmdheight=2
