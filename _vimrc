@@ -33,6 +33,7 @@ if has('gui_macvim')
 		noremap FF :Explore<CR>
 		map <silent> <F2> :nohlsearch<CR>
 		nnoremap ,v :<C-u>tabnew ~/.vimrc<CR>
+		nnoremap NT :<C-u>tabnew<CR>
 		nnoremap <F5> :<C-u>source ~/.vimrc<CR>
 		noremap j gj
 		noremap k gk	
@@ -69,6 +70,7 @@ if has('gui_macvim')
 		Bundle 'snipMate'
 		Bundle 'surround.vim'
 		Bundle 'YankRing.vim'
+		Bundle 'quickrun.vim'
 		Bundle 'Shougo/neocomplcache'
 		Bundle 'Align'
 
@@ -86,5 +88,13 @@ if has('gui_macvim')
 		
 		"imap <C-g>     <Plug>(neocomplcache_snippets_expand)
 		"smap <C-g>     <Plug>(neocomplcache_snippets_expand)
+		
+		"quickrun
+		let g:quickrun_config={'*': {'split': ''}}
+		silent! nmap <unique> <F7> <Plug>(quickrun)
+		
+		" 横分割時は下へ､ 縦分割時は右へ新しいウィンドウが開くようにする
+		set splitbelow
+		set splitright
 
 endif
