@@ -36,7 +36,10 @@ if has('gui_macvim')
 		nnoremap NT :<C-u>tabnew<CR>
 		nnoremap <F5> :<C-u>source ~/.vimrc<CR>
 		noremap j gj
-		noremap k gk	
+		noremap k gk
+		nmap n nzz
+		nmap N Nzz
+		vnoremap v $h
 		
 		"日付挿入
 		inoremap <Leader><Leader>date <C-R>=strftime('%Y/%m/%d (%a)')<CR>
@@ -96,5 +99,11 @@ if has('gui_macvim')
 		" 横分割時は下へ､ 縦分割時は右へ新しいウィンドウが開くようにする
 		set splitbelow
 		set splitright
+		
+		" カレントディレクトリを自動的に移動
+		au BufEnter * execute ":lcd " . expand("%:p:h")
+		
+		"選択部を検索
+		vnoremap * "zy:let @/ = @z<CR>n
 
 endif
