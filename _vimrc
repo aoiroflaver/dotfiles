@@ -32,6 +32,7 @@ if has('gui_macvim')
 		nnoremap gr gT
 		noremap FF :Explore<CR>
 		map <silent> <F2> :nohlsearch<CR>
+		map <silent> <F1> :nohlsearch<CR>
 		nnoremap ,v :<C-u>tabnew ~/.vimrc<CR>
 		nnoremap NT :<C-u>tabnew<CR>
 		nnoremap <F5> :<C-u>source ~/.vimrc<CR>
