@@ -103,5 +103,8 @@ if has('gui_macvim')
 		
 		" カレントディレクトリを自動的に移動
 		au BufEnter * execute ":lcd " . expand("%:p:h")
+		
+		"選択部を検索
+		vnoremap * "zy:let @/ = @z<CR>n
 
 endif
